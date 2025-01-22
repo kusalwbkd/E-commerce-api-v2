@@ -49,12 +49,12 @@ app.use('/api/v1/sales', authenticateUser, salesRouter);
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Serve static files from the "public" directory
-app.use(express.static(path.resolve(__dirname, './client/dist')));
+/* app.use(express.static(path.resolve(__dirname, './client/dist')));
 
 // Fallback to index.html for SPA routing
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, './client/dist', 'index.html'));
-});
+}); */
 
 // 404 error handling
 app.use('*', (req, res) => {
