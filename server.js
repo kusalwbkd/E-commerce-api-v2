@@ -55,6 +55,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, './client/dist', 'index.html'));
 }); */
+app.use('/',(req,res)=>{
+  res.send('Ecommerce-api')
+})
 
 // 404 error handling
 app.use('*', (req, res) => {
