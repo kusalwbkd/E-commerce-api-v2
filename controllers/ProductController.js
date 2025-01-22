@@ -68,7 +68,7 @@ queryObject.category=category;
 const limit=Number(req.query.limit)||10
 const skip=(page-1)*limit 
    const sortKey=sortOptions[sort]||sortOptions["a-z"]
-   const products=await Product.find(queryObject).sort(sortKey).skip(skip).limit(limit)
+   const products=await Product.find({})
    
 const totalProducts=await Product.countDocuments(queryObject)
 
